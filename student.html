@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student | Finance & Reporting - Fullbright College SMS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="sidebar">
+  <div class="brand"><img src="logo.jpg" alt="Fullbright College"><div><b>SMS</b><small>School Management System</small></div></div>
+  <p class="group">Finance &amp; Reporting</p>
+  <nav id="nav">
+    <a data-view="fees" class="active">💳 Fees</a>
+    <a data-view="payment">🧾 Payment</a>
+    <a data-view="financial">📊 Financial Reports</a>
+    <a data-view="academic">🎓 Academic Reports</a>
+    <a data-view="notifications">🔔 Notifications <span id="badge" class="badge"></span></a>
+  </nav>
+  <div class="motto">Stewardship • Excellence • Service</div>
+</aside>
+<main>
+  <header class="topbar">
+    <div class="crumb">Finance &amp; Reporting <span id="crumb"></span></div>
+    <div class="user"><span id="who">Loading…</span><button class="ghost" onclick="logout()">Logout</button></div>
+  </header>
+  <section id="view"><p class="empty">Loading…</p></section>
+</main>
+<div id="modal" class="modal hidden"><div class="box" id="modalBox"></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="student.js"></script>
+</body>
+</html>

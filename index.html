@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login | Finance & Reporting - Fullbright College SMS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="auth">
+<div class="auth-card">
+  <div class="auth-head">
+    <img src="logo.jpg" alt="Fullbright College">
+    <h2>Finance &amp; Reporting</h2>
+    <small>Fullbright College · School Management System</small>
+  </div>
+  <div class="auth-body">
+    <div class="tabs" id="tabs">
+      <a data-t="login" class="active">Login</a>
+      <a data-t="signup">Sign up</a>
+    </div>
+
+    <!-- LOGIN -->
+    <form id="loginForm">
+      <label>Email</label><input type="email" id="lEmail" required>
+      <label>Password</label><input type="password" id="lPass" required>
+      <div style="text-align:right;margin-top:8px"><a class="link" id="toForgot">Forgot password?</a></div>
+      <button class="full" type="submit">Login</button>
+    </form>
+
+    <!-- SIGNUP -->
+    <form id="signupForm" class="hide">
+      <label>Full name</label><input id="sName" required maxlength="100">
+      <label>Student number</label><input id="sNo" required maxlength="30" placeholder="e.g. 2026-00123">
+      <div class="grid g2" style="gap:10px">
+        <div><label>Course</label><select id="sCourse"><option>BSIT</option><option>BBIT</option><option>BSBA</option><option>BSED</option><option>BSCRIM</option></select></div>
+        <div><label>Year level</label><select id="sYear"><option>1st Year</option><option>2nd Year</option><option>3rd Year</option><option>4th Year</option></select></div>
+      </div>
+      <label>Email</label><input type="email" id="sEmail" required>
+      <label>Password (min. 6 characters)</label><input type="password" id="sPass" minlength="6" required>
+      <label>Confirm password</label><input type="password" id="sPass2" minlength="6" required>
+      <button class="full" type="submit">Create account</button>
+    </form>
+
+    <!-- FORGOT -->
+    <form id="forgotForm" class="hide">
+      <p class="sub" style="margin:0">Enter your email and we'll send you a link to reset your password.</p>
+      <label>Email</label><input type="email" id="fEmail" required>
+      <button class="full" type="submit">Send reset link</button>
+      <div style="text-align:center;margin-top:12px"><a class="link" id="backLogin">← Back to login</a></div>
+    </form>
+
+    <div class="demo-box">
+      <div class="demo-line"><span>or try the demo</span></div>
+      <div class="demo-btns">
+        <button type="button" class="demo" data-demo="student">🎓 Demo Student</button>
+        <button type="button" class="demo" data-demo="admin">🛠️ Demo Admin</button>
+      </div>
+      <small class="demo-note">Demo accounts are real accounts — everything you do is saved in the database.</small>
+    </div>
+
+    <div id="msg" class="msg"></div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>
